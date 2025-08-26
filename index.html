@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Gestora de TI</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            color: #000000;
+            background: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        header {
+            background: #373737;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .header-text h1 {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section h2 {
+            margin-bottom: 15px;
+            color: #373737;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #373737;
+            color: #fff;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            background: #373737;
+            color: #fff;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            .header-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <img src="eu.jpg" alt="Foto de Perfil - Rita Carvalho" class="profile-pic">
+            <div class="header-text">
+                <h1>Rita Carvalho</h1>
+                <p>Gestora de TI</p>
+                <nav>
+                    <ul>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#habilidades">Habilidades</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre" class="container">
+        <h2>Sobre Mim</h2>
+        <p>Sou gestora de TI com experiência em liderança de equipes, gerenciamento de projetos e implementação de soluções inovadoras que impulsionam a transformação digital nas empresas.</p>
+    </section>
+
+    <section id="habilidades" class="container">
+        <h2>Habilidades</h2>
+        <div class="skills">
+            <span>Gestão de Projetos</span>
+            <span>Banco de dados</span>
+            <span>Scrum & Agile</span>
+            <span>JavaScript Básico</span>
+            <span>Python</span>
+            <span>HTML5 & CSS3</span>
+            <span>Design gráfico</span>
+        </div>
+    </section>
+
+    <section id="projetos" class="container">
+        <h2>Projetos</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Projeto A</h3>
+                <p>Implementação de sistema de gestão em nuvem, aumentando a eficiência em 30%.</p>
+            </div>
+            <div class="project-card">
+                <h3>Projeto B</h3>
+                <p>Transformação digital em uma empresa de médio porte, reduzindo custos operacionais.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="container">
+        <h2>Contato</h2>
+        <p>Email: <a href="mailto:ritadecassiack66@email.com">ritadecassiack66@email.com</a></p>
+        <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/ritacarvalho</a></p>
+        <p>Telefone: (28) 999571127</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Rita Carvalho </p>
+    </footer>
+
+    <script>
+        // Rolagem suave para os links do menu
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))
+                    .scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
